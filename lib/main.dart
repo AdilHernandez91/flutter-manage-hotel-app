@@ -6,6 +6,8 @@ import 'scope-models/main.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/hotel_create_screen.dart';
+import 'screens/hotel_manage_screen.dart';
 
 void main() => runApp(HotelApp());
 
@@ -52,6 +54,8 @@ class _HotelAppState extends State<HotelApp> {
             _isAuthenticated ? HomeScreen() : LoginScreen(),
           '/register': (BuildContext context) => RegisterScreen(),
           '/home': (BuildContext context) => HomeScreen(),
+          '/hotels/create': (BuildContext context) => HotelCreateScreen(),
+          '/hotels/manage': (BuildContext context) => HotelManageScreen(),
         },
         onGenerateRoute: (RouteSettings settings) {
           if (!_isAuthenticated) {
