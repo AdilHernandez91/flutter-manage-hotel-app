@@ -51,8 +51,7 @@ class _HotelAppState extends State<HotelApp> {
           '/': (BuildContext context) =>
             _isAuthenticated ? HomeScreen() : LoginScreen(),
           '/register': (BuildContext context) => RegisterScreen(),
-          '/home': (BuildContext context) =>
-              _isAuthenticated ? HomeScreen() : LoginScreen(),
+          '/home': (BuildContext context) => HomeScreen(),
         },
         onGenerateRoute: (RouteSettings settings) {
           if (!_isAuthenticated) {
